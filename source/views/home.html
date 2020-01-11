@@ -1,0 +1,38 @@
+<div class="container">
+	<div class="top">
+		<div class="row">
+			<div class="logos">
+				<img src="{{nextGame.visitorlogo}}" />
+				<span>@</span>
+				<img src="{{nextGame.homelogo}}" />
+			</div>
+		</div>
+		<div class="row countdown">
+			<h1 class="block">{{nextGame.opponent}}</h1>
+			<div class="gameInfo">
+				<h3>{{nextGame.displayDate}} | {{nextGame.displayTime}} | {{nextGame.location}}</h3>
+				<div>Current: <span id="currentDate"></span></div>
+				<div>{{nextGame.difference}}</div>
+			</div>
+		</div>
+		<div class="row counter" id="counter" data-unix="{{nextGame.dateTimeUnix}}">
+			<table class="center">
+				<tr class="counterNums">
+					<td class="block" id="counterDays"></td>
+					<td class="block" id="counterHours"></td>
+					<td class="block" id="counterMinutes"></td>
+					<td class="block" id="counterSeconds"></td>
+				</tr>
+				<tr>
+					<td>days</td>
+					<td>hours</td>
+					<td>minutes</td>
+					<td>seconds</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="schedule">
+	{{> schedule }}
+	</div>
+</div>
